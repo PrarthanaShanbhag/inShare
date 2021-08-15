@@ -1,79 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=1024" name="viewport" />
     <title>inShare - Easy file Sharing</title>
-    <link rel="stylesheet" href="./css/style.css"/>
-    
+    <link rel="stylesheet" href="./css/style.css" />
+
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <img src="./images/logo.png" alt="Inshare logo" class="logo">
-    <section class="upload-container">
-        <form action="">
-        <div class="drop-zone">
-            <div class="icon-container">
-                <img src='./images/file.svg' alt='file icon' class='centre'  draggable="false"/>
-                <img src='./images/file.svg' alt='file icon' class='left' draggable="false"/>
-                <img src='./images/file.svg' alt='file icon' class='right'  draggable="false"/>             
-            </div>
-            <input type="file" id='fileinput'/>
-            <div class="title">Drop your file here or <span class='browsebtn'>browse</span></div>
-        </div>
-    </form>
-    <div class="progress-container">
-        <div class="bg-progress"></div>
-
-        <div class="inner-container">
-            <div class="status">Uploading...</div>
-            <div class="percent-container">
-                <span class="percentage" id="progressPercent">0</span>%
-            </div>
-            <div class="progress-bar"></div>
-        </div>
-
-    </div>
-
-    <div class="sharing-container">
-        <p class="expire">Link expires in 24 hrs</p>
-
-
-        <div class="input-container">
-            <input type="text" id="fileURL" readonly>
-            <img src="./images/copy-icon.svg" id="copyURLBtn" alt="copy to clipboard icon">
-        </div>
-
-
-        <p class="email-info">Or Send via Email</p>
-        <div class="email-container">
-            <form id="emailForm">
-                <div class="filed">
-                    <label for="fromEmail">Your email</label>
-                    <input type="email" autocomplete="email" required name="from-email" id="fromEmail">
-                </div>
-
-                <div class="filed">
-                    <label for="toEmail">Receiver's email</label>
-                    <input type="email" required autocomplete="receiver" name="to-email" id="toEmail">
-                </div>
-                <div class="send-btn-container">
-                    <button disabled=true type="submit">Uploading</button>
+    <div class="body">
+        <section class="upload-container">
+            <form action="">
+                <div class="drop-zone">
+                    <div class="icon-container">
+                        <img src='./images/file.svg' alt='file icon' class='centre' draggable="false" />
+                        <img src='./images/file.svg' alt='file icon' class='left' draggable="false" />
+                        <img src='./images/file.svg' alt='file icon' class='right' draggable="false" />
+                    </div>
+                    <input type="file" id='fileinput' />
+                    <div class="title">Drop your file here or <span class='browsebtn'>browse</span></div>
                 </div>
             </form>
-        </div>
+            <div class="progress-container">
+                <div class="bg-progress"></div>
+
+                <div class="inner-container">
+                    <div class="status">Uploading...</div>
+                    <div class="percent-container">
+                        <span class="percentage" id="progressPercent">0</span>%
+                    </div>
+                    <div class="progress-bar"></div>
+                    
+                </div>
+
+            </div>
+
+            <div class="sharing-container">
+                <center>
+                    <p class="expire">Link expires in 24 hrs</p>
+                </center>
+
+
+                <div class="input-container">
+                    <input type="text" id="fileURL" readonly>
+                    <img src="./images/copy-icon.svg" id="copyURLBtn" alt="copy to clipboard icon">
+                </div>
+
+
+                <center>
+                    <p class="email-info">Or Send via Email</p>
+                </center>
+                <div class="email-container">
+                    <form id="emailForm">
+                        <div class="filed">
+                            <label for="fromEmail">Your email</label>
+                            <input type="email" autocomplete="email" required name="from-email" id="fromEmail">
+                        </div>
+
+                        <div class="filed">
+                            <label for="toEmail">Receiver's email</label>
+                            <input type="email" required autocomplete="receiver" name="to-email" id="toEmail">
+                        </div>
+                        <div class="send-btn-container">
+                            <button disabled=true type="submit">Uploading</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+        <div class="image-vector"></div>
+        <div class="toast">Sample message</div>
+
+        <img class='images' src="./images/undraw-upload.svg" draggable="false" alt="background">
     </div>
-    
-</section>
-<div class="image-vector"></div>
-<div class="toast">Sample message</div>
 
-<img class='images' src="./images/undraw-upload.svg" draggable="false" alt="background">
-
-
-         <!-- github fork button -->
-    <a href="https://github.com/PrarthanaShanbhag/inShare" target="_blank" class="github-corner" aria-label="View source on GitHub">
+    <!-- github fork button -->
+    <a href="https://github.com/PrarthanaShanbhag/inShare" target="_blank" class="github-corner"
+        aria-label="View source on GitHub">
         <svg width="80" height="80" viewbox="0 0 250 250"
             style="fill:#131315c9; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
             <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -88,7 +97,8 @@
         </svg>
     </a>
 
-   
+
     <script src="./js/index.js"></script>
 </body>
+
 </html>
