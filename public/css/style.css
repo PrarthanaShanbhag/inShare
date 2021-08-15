@@ -1,0 +1,139 @@
+:root {
+    --main-bg-color: #edf5fe;
+    --light-blue: #03a9f4;
+    --dark-blue: #028bca;
+    --conatainer-width:500px;
+
+  }
+/*home page*/
+body,html{
+    font-family: system-ui;
+    font-weight: 500;
+    background-color: var(--main-bg-color);
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+body,
+.drop-zone,
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.upload-container{
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 20px 20px #0000002e;
+}
+
+.drop-zone{
+    width: var(--conatainer-width); 
+    min-height: 200px;
+    border:2px dashed #0288d147;
+    border-radius: 10px;
+    margin: 30px;
+    transition: all 0.2s ease;
+}
+.icon-container {
+    width:75px;
+    height: 100px;
+    position:relative;
+}
+.icon-container img{
+    width:75px;
+    position:absolute; 
+    transform-origin: bottom;
+    transition: transform 250ms ease-in-out ;
+}
+.icon-container .centre{
+    z-index: 5;
+}
+
+
+.dragged .icon-container .right{
+    transform: rotate(10deg) translateX(20px) scale(0.9);
+    filter:grayscale(0.4);
+}
+
+.dragged .icon-container .left{
+    transform: rotate(-10deg) translateX(-20px) scale(0.9);
+    filter:grayscale(0.8);
+}
+
+
+.dragged .icon-container .centre{
+transform: translateY(-5px);
+}
+.dragged.drop-zone{
+    background:#eff5fe;
+    border-color: #2196f3;
+}
+
+.browsebtn{
+    color: #2196f3;
+    cursor: pointer;
+}
+
+#fileinput{
+    display: none;
+}
+
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+  }
+
+/*download page*/
+
+section.download {
+    background: #fff;
+    width: 430px;
+    max-width: 90%;
+    border-radius: 25px;
+    box-shadow: 0px 20px 20px 0px #00000017;
+    padding: 2rem;
+    text-align: center;
+}
+.download__icon {
+    /* height: 8rem; */
+   color: #03a9f4;
+}
+.download__meta h4 {
+    margin-bottom: 0;
+    line-height: 1.3;
+}
+.send-btn-container a {
+    display: inline-block;
+    font-size: 18px;
+    padding: 8px 40px;
+    margin-top: 15px;
+    background: var(--light-blue);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+  }
+
+  .send-btn-container a:hover {
+      background: var(--dark-blue);
+  }
+ .btn {
+    position: relative;
+    margin-top:65vh;
+    /* right:45% */
+ }
+
+ .progress-container{
+  width: var(--conatainer-width);
+  height: 70px;
+ border: 2px solid;
+ margin-bottom: 25px;
+ border: 10px;
+ }
