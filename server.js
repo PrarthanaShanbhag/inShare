@@ -41,7 +41,7 @@ app.use('/files/download',require('./router/download'));
 //   console.log(file);
 // });
 
-schedule.scheduleJob('*/60 * * * * *', () => {
+schedule.scheduleJob('*/18000 * * * * *', () => {
 //schedule.scheduleJob('0 0 * * *', () => {    
         
 deleteData()
