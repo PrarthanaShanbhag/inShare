@@ -6,13 +6,11 @@ const File = require('../models/file')
 const { v4: uuid4 } = require('uuid');
 
 const dir=path.join(__dirname,'..')
-const testFolder = `${dir}/uploads`;
-fs.readdirSync(testFolder).forEach(file => {
-  console.log(file);
-});
-// console.log(__dirname)
+const uploads = `${dir}/uploads`;
+
+console.log(uploads)
 let storage = multer.diskStorage({
-    destination: (req, file, cb) => { cb(null, `${dir}/uploads/`) },
+    destination: (req, file, cb) => { cb(null, `${uploads}`) },
     filename: (req, file, cb) => {
         const uniqueName = `${Date.now()}-${Math.round(Math.random() * 1E9)}${path.extname(file.originalname)}`
         cb(null, uniqueName)
@@ -57,6 +55,9 @@ router.post('/', (req, res) => {
     })
 })
 
+
+
+//----------------------------------------------MAIL-------------------------------------
 router.post('/send', async (req, res) => {
     
     const { uuid, emailfrom, emailto } = req.body;
