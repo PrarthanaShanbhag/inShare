@@ -18,7 +18,7 @@
     <div class="body">
         <img class='images' src="./images/undraw-upload.svg" draggable="false" alt="background">
         <section class="upload-container">
-            <form action="">
+            <form action="" autocomplete="off">
                 <div class="drop-zone">
                     <div class="icon-container">
                         <img src='./images/file.svg' alt='file icon' class='centre' draggable="false" />
@@ -59,15 +59,15 @@
                     <p class="email-info">Or Send via Email</p>
                 </center>
                 <div class="email-container">
-                    <form id="emailForm">
+                    <form id="emailForm" autocomplete="off">
                         <div class="filed">
                             <label for="fromEmail">Your email : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                            <input type="email" autocomplete="email" required name="from-email" id="fromEmail">
+                            <input type="email" autocomplete="email" required autocomplete="off" name="from-email" id="fromEmail">
                         </div>
 
                         <div class="filed">
                             <label for="toEmail">Receiver's email : &nbsp;&nbsp;&nbsp;&nbsp;</label>
-                            <input type="email" required autocomplete="receiver" name="to-email" id="toEmail">
+                            <input type="email" required autocomplete="receiver" autocomplete="off" name="to-email" id="toEmail">
                         </div>
                         <div class="send-btn-container">
                          <center> <button class='btns' disabled type="submit">Uploading</button></center>  
