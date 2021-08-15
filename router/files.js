@@ -5,6 +5,10 @@ const File = require('../models/file')
 const { v4: uuid4 } = require('uuid');
 
 const dir=path.join(__dirname,'..')
+const testFolder = `${dir}/uploads`;
+fs.readdirSync(testFolder).forEach(file => {
+  console.log(file);
+});
 // console.log(__dirname)
 let storage = multer.diskStorage({
     destination: (req, file, cb) => { cb(null, `${dir}/uploads/`) },
