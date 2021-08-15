@@ -31,7 +31,7 @@ body,
   margin-top: 0%;
 }
 .body .images{
-  width: var(--conatainer-width);
+  width: 40%;
   align-items: flex-start;
 
 }
@@ -39,9 +39,7 @@ body,
     background: white;
     border-radius: 25px;
     box-shadow: 0 20px 20px #0000002e;
-   
-    
-    
+    margin-left: 10%;
 }
 
 .drop-zone{
@@ -49,6 +47,7 @@ body,
     min-height: 200px;
     border:2px dashed #0288d147;
     border-radius: 10px;
+    position: relative;
     margin: 30px;
     transition: all 0.2s ease;
 }
@@ -157,7 +156,7 @@ section.download {
  border: 2px solid;
  margin-bottom: 55px;
  border: 10px;
- /* display: none; */
+ display: none;
 
  }
 
@@ -220,7 +219,7 @@ section.download {
   margin:30px;
   margin-top: -40px;
   padding: 30px;
-  display: none;
+  /* display: none; */
 }
 
 .expire{
@@ -228,4 +227,53 @@ section.download {
 }
 .email-info{
   font-weight: 400;
+}
+
+.github-corner{
+  position: fixed;
+  right:0 ;
+  top:0;
+}
+.email-container{
+  border: 2px solid #0288d147 ;
+  border-radius: 10px;
+}
+.filed{
+  position: relative;
+  margin: 30px;
+}
+.btns{
+  display: inline-block;
+  font-size: 18px;
+  padding: 8px 40px;
+  margin-bottom:15px;
+  background:#028bca;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  
+}
+#fromEmail,#toEmail{
+  border:none;
+  border-bottom:1px solid #028bca;
+  right: 10px;
+}
+#fromEmail:focus-within,#toEmail:focus-within{
+  outline:none;
+  border-bottom:1px solid #028bca;
+}
+
+
+
+@media screen and (max-width:480px) {
+.body{
+  display:flex;
+  flex-direction: column;
+  margin-top: 15vh;
+}
+
+
 }

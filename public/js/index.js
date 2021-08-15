@@ -14,7 +14,7 @@ const fileURL = document.querySelector("#fileURL");
 const emailForm = document.querySelector("#emailForm");
 const sendbtn = document.querySelector(".send-btn-container");
 const toast = document.querySelector(".toast");
-
+const btns = document.querySelector(".btns");
 
 const host = 'https://inshare-easyfileshare.herokuapp.com';
 const uploadURL = `${host}/api/files`;
@@ -117,8 +117,8 @@ const onFileUploadSuccess = (res) => {
     status.innerText = "Uploaded";
   
     // remove the disabled attribute from form btn & make text send
-    sendbtn.disabled=false;
-    sendbtn.innerText = "Send";
+    btns.disabled=false;
+    btns.innerText = "Send";
     progressContainer.style.display = "none"; // hide the box
 
     const { file: url } = JSON.parse(res);
@@ -166,27 +166,27 @@ emailForm.addEventListener("submit", (e) => {
     emailForm[2].innerText = "Sending";
   
     const url = fileURL.value;
+    // console.log(url)
+    // console.log(url.split("/").splice(-1, 1)[0])
   
     const formData = {
       uuid: url.split("/").splice(-1, 1)[0],
-      emailTo: emailForm.elements["to-email"].value,
+      
       emailFrom: emailForm.elements["from-email"].value,
+      emailTo: emailForm.elements["to-email"].value
     };
-    console.log(formData);
+    // console.log(formData);
     fetch(emailURL, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) {
-          showToast("Email Sent");
-          sharingContainer.style.display = "none"; // hide the box
-        }
-      });
+      body: JSON.stringify(formData)
+    }).then(()=>{  showToast("Email Sent");})
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     if (data.success) {
+    //       showToast("Email Sent");
+    //       sharingContainer.style.display = "none"; // hide the box
+    //     }
+    //   });
   });
   
 

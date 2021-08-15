@@ -61,7 +61,7 @@ router.post('/',(req, res) => {
 router.post('/send', async (req, res) => {
     
     const { uuid, emailfrom, emailto } = req.body;
-
+    
 
     //validate request
     if (!uuid || !emailfrom || !emailto) {
