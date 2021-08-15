@@ -169,14 +169,18 @@ emailForm.addEventListener("submit", async(e) => {
     
   
     const formData = {
-      uuid: url.split("/").splice(-1, 1)[0],
+      "uuid": url.split("/").splice(-1, 1)[0],
       
-      emailFrom: emailForm.elements["from-email"].value,
-      emailTo: emailForm.elements["to-email"].value
+      "emailFrom": emailForm.elements["from-email"].value,
+      "emailTo": emailForm.elements["to-email"].value
     };
     // console.log(formData);
     await fetch(emailURL, {
       method: "POST",
+     headers:{
+          "Content-type": "application/json",
+	       //"accept": "application/json"
+     },
       body: JSON.stringify(formData)
     }).then(()=>{  showToast("Email Sent");})
     //   .then((res) => res.json())
