@@ -100,8 +100,8 @@ router.post('/send', async (req, res) => {
     //send email
     const sendMail = require('../services/emailServices')
     sendMail({
-        from:file.sender,
-        to:file.reciever,
+        from:emailfrom,
+        to:emailto,
         subject:'inShare file  sharing ',
         text:`${emailfrom} has shared a file with you`,
         html:require('../services/emailTemplate')({
