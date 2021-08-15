@@ -24,12 +24,12 @@ let upload = multer({
 }).single('myfile')//single file
 
 
-router.post('/', upload,async(req, res) => {
+router.post('/',(req, res) => {
 
     //store file using multer
 
-    // upload(req, res, async (err) => {
-        //validate request
+    upload(req, res, async (err) => {
+      //  validate request
         if (!req.file) {
             return (res.json({ error: 'All fields are required' }))
         }
@@ -53,7 +53,7 @@ router.post('/', upload,async(req, res) => {
         return res.json({ file: `${process.env.APP_BASED_URL}/files/${response.uuid}` })
 
     })
-//})
+})
 
 
 
