@@ -24,7 +24,7 @@ let upload = multer({
 }).single('myfile')//single file
 
 
-router.post('/', upload,(req, res) => {
+router.post('/', upload,async(req, res) => {
 
     //store file using multer
 
