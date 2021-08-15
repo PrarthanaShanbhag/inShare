@@ -4,10 +4,10 @@ const path = require('path')
 const File = require('../models/file')
 const { v4: uuid4 } = require('uuid');
 
-console.log(path.join(__dirname,'..'))
+const dir=path.join(__dirname,'..')
 // console.log(__dirname)
 let storage = multer.diskStorage({
-    destination: (req, file, cb) => { cb(null, 'uploads/') },
+    destination: (req, file, cb) => { cb(null, `${dir}/uploads/`) },
     filename: (req, file, cb) => {
         const uniqueName = `${Date.now()}-${Math.round(Math.random() * 1E9)}${path.extname(file.originalname)}`
         cb(null, uniqueName)
