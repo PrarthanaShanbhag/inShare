@@ -13,8 +13,8 @@ router.get('/:uuid',async(req,res)=>{
         console.log(uploads)
         const filePath=`${uploads}/${file.path}`
         console.log(filePath)
-        await res.download(filePath);
-        res.redirect('/')
+         res.download(filePath);
+       
     }
     catch(err){
         return res.render('404',{err :'Download link expired'});
