@@ -4,7 +4,7 @@ const path = require('path')
 const File = require('../models/file')
 const { v4: uuid4 } = require('uuid');
 
-// console.log(path.join(__dirname,'..'))
+console.log(path.join(__dirname,'..'))
 // console.log(__dirname)
 let storage = multer.diskStorage({
     destination: (req, file, cb) => { cb(null, 'uploads/') },
