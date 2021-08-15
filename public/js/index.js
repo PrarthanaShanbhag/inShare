@@ -187,6 +187,8 @@ emailForm.addEventListener("submit", async(e) => {
       .then((data) => {
         if (data.success) {
           showToast("Email Sent");
+          emailForm.elements["from-email"].value='';
+          emailForm.elements["to-email"].value='';
           sharingContainer.style.display = "none"; // hide the box
         }
       });

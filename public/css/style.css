@@ -156,7 +156,7 @@ section.download {
  border: 2px solid;
  margin-bottom: 55px;
  border: 10px;
- display: none;
+ /* display: none; */
 
  }
 
@@ -219,7 +219,7 @@ section.download {
   margin:30px;
   margin-top: -40px;
   padding: 30px;
-  /* display: none; */
+  display: none;
 }
 
 .expire{
