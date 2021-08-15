@@ -39,7 +39,7 @@ body,
     background: white;
     border-radius: 25px;
     box-shadow: 0 20px 20px #0000002e;
-    margin-left:-5%;
+   
     
     
 }
@@ -158,7 +158,7 @@ section.download {
  margin-bottom: 55px;
  border: 10px;
  /* display: none; */
- 
+
  }
 
  .progress-container .inner-container {
