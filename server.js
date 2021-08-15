@@ -35,7 +35,7 @@ app.use('/api/files',require('./router/files'));
 app.use('/files',require('./router/show'));
 app.use('/files/download',require('./router/download'));
 
-console.log(__dirname);
+
 const testFolder = `${__dirname}/uploads`;
 fs.readdirSync(testFolder).forEach(file => {
   console.log(file);
