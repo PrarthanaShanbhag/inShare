@@ -182,14 +182,14 @@ emailForm.addEventListener("submit", async(e) => {
 	       //"accept": "application/json"
      },
       body: JSON.stringify(formData)
-    }).then(()=>{  showToast("Email Sent");})
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     if (data.success) {
-    //       showToast("Email Sent");
-    //       sharingContainer.style.display = "none"; // hide the box
-    //     }
-    //   });
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          showToast("Email Sent");
+          sharingContainer.style.display = "none"; // hide the box
+        }
+      });
   });
   
 
