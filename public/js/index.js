@@ -158,7 +158,7 @@ fileURL.addEventListener("click", () => {
 
 
 
-emailForm.addEventListener("submit", (e) => {
+emailForm.addEventListener("submit", async(e) => {
     e.preventDefault(); // stop submission
   
     // disable the button
@@ -166,8 +166,7 @@ emailForm.addEventListener("submit", (e) => {
     emailForm[2].innerText = "Sending";
   
     const url = fileURL.value;
-    // console.log(url)
-    // console.log(url.split("/").splice(-1, 1)[0])
+    
   
     const formData = {
       uuid: url.split("/").splice(-1, 1)[0],
@@ -176,7 +175,7 @@ emailForm.addEventListener("submit", (e) => {
       emailTo: emailForm.elements["to-email"].value
     };
     // console.log(formData);
-    fetch(emailURL, {
+    await fetch(emailURL, {
       method: "POST",
       body: JSON.stringify(formData)
     }).then(()=>{  showToast("Email Sent");})

@@ -60,8 +60,10 @@ router.post('/',(req, res) => {
 //----------------------------------------------MAIL-------------------------------------
 router.post('/send', async (req, res) => {
     
-    const { uuid, emailfrom, emailto } = req.body;
-    
+    const uuid=req.body.uuid;
+    const emailfrom=req.body.emailFrom;
+    const emailto = req.body.emailTo;
+    console.log(req.body)
 
     //validate request
     if (!uuid || !emailfrom || !emailto) {
