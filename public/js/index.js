@@ -96,7 +96,7 @@ const uploadFile = () => {
 
     // handle error
     xhr.upload.onerror = function () {
-        alert(console.error())
+        
         showToast(`Error in upload: ${xhr.status}.`);
         fileinput.value = ""; // reset the input
     };

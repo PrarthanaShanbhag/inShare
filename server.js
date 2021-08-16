@@ -13,7 +13,8 @@ const port= process.env.PORT||3300;
 connectDB()
 
 const corsOption={
-    origin:process.env.ALLOWED_CLIENTS.split(',')
+    origin:process.env.APP_BASED_URL
+   // origin:process.env.ALLOWED_CLIENTS.split(',')
 
 }
 
