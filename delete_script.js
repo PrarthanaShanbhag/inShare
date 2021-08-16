@@ -32,24 +32,6 @@ async function deleteData() {
 
 }
 
-// async function del(){
-//     const file = new File({
-//         //data to be stored
-//         original_name: 'req.file.originalname',
-//         filename: 'req.file.filename',
-//         path: 'req.file.path',
-//         size: 10,
-//         uuid: '5'
 
-
-//     });
-//     //send response->download link
-//     const response = await file.save();
-//     console.log('hi')
-// }
-// deleteData()
-// .then(process.exit)
-// .catch()
 
 module.exports=deleteData;
-// module.exports=del;

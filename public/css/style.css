@@ -172,7 +172,7 @@ section.download {
  margin-bottom: 55px;
  border: 10px;
  margin-top: -5%;
- /* display: none; */
+ display: none;
 
  }
 
@@ -236,7 +236,7 @@ section.download {
   margin:30px;
   margin-top: -40px;
   padding: 30px;
-  /* display: none; */
+  display: none;
 }
 
 .expire{
@@ -295,7 +295,7 @@ section.download {
   position: relative;
   /* margin-top: 200px;
   margin-bottom: 5% ; */
-  margin-top: 28%;
+ 
 }
 .upload-container{
   display: flex;

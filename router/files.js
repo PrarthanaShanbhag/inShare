@@ -8,7 +8,7 @@ const { v4: uuid4 } = require('uuid');
 const dir=path.join(__dirname,'..')
 const uploads = `${dir}/uploads`;
 
-console.log(uploads)
+
 let storage = multer.diskStorage({
     destination: (req, file, cb) => { cb(null, `${uploads}`) },
     filename: (req, file, cb) => {
@@ -63,7 +63,7 @@ router.post('/send', async (req, res) => {
     const uuid=req.body.uuid;
     const emailfrom=req.body.emailFrom;
     const emailto = req.body.emailTo;
-    console.log(req.body)
+
 
     //validate request
     if (!uuid || !emailfrom || !emailto) {

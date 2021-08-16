@@ -37,10 +37,6 @@ app.use('/files',require('./router/show'));
 app.use('/files/download',require('./router/download'));
 
 
-// const testFolder = `${__dirname}/uploads`;
-// fs.readdirSync(testFolder).forEach(file => {
-//   console.log(file);
-// });
 
 //schedule.scheduleJob('*/18000 * * * * *', () => {
 schedule.scheduleJob('0 0 * * *', () => {    
