@@ -40,7 +40,9 @@ body,
     border-radius: 25px;
     box-shadow: 0 20px 20px #0000002e;
     margin-left: 10%;
+    min-height: 350px;
 }
+
 
 .drop-zone{
     width: var(--conatainer-width); 
@@ -148,6 +150,13 @@ section.download {
  /* toast*/
  .toast{
    display: none;
+   position: absolute;
+  top: 5%;
+  background-color: #028bca;
+  border:2px solid #028bca;
+  padding: 10px;
+  border-radius: 10px;
+   color: whitesmoke;
  }
 
  .progress-container{
@@ -156,6 +165,7 @@ section.download {
  border: 2px solid;
  margin-bottom: 55px;
  border: 10px;
+ margin-top: -5%;
  /* display: none; */
 
  }
@@ -193,7 +203,7 @@ section.download {
   transition: transform 200ms linear;
   transform: scaleX(0);
   transform-origin: left;
-  
+  margin-bottom: 5%;
 }
 
 
@@ -237,6 +247,7 @@ section.download {
 .email-container{
   border: 2px solid #0288d147 ;
   border-radius: 10px;
+  margin-bottom: -5%;
 }
 .filed{
   position: relative;
