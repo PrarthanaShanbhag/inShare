@@ -40,7 +40,8 @@ body,
     border-radius: 25px;
     box-shadow: 0 20px 20px #0000002e;
     margin-left: 10%;
-    min-height: 350px;
+    margin-right: 10%;
+    min-height: 200px;
 }
 
 
@@ -51,6 +52,7 @@ body,
     border-radius: 10px;
     position: relative;
     margin: 30px;
+    
     transition: all 0.2s ease;
 }
 .icon-container {
@@ -166,7 +168,7 @@ section.download {
  margin-bottom: 55px;
  border: 10px;
  margin-top: -5%;
- /* display: none; */
+ display: none;
 
  }
 
@@ -203,12 +205,13 @@ section.download {
   transition: transform 200ms linear;
   transform: scaleX(0);
   transform-origin: left;
-  margin-bottom: 5%;
+  
 }
 
 
 .input-container{
   display: flex;
+  
   justify-content: space-between;
   border:2px dashed #0288d147;
   border-radius: 10px;
@@ -279,12 +282,14 @@ section.download {
 
 
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:780px) {
 .body{
   display:flex;
   flex-direction: column;
-  margin-top: 15vh;
+  margin-top: 20vh;
 }
-
+.upload-container{
+  width: 100;
+}
 
 }
