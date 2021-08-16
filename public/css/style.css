@@ -286,10 +286,20 @@ section.download {
 .body{
   display:flex;
   flex-direction: column;
-  margin-top: 20vh;
+  justify-content: space-around;
+  
 }
 .upload-container{
-  width: 100;
+  width: 80vw;
+  margin-bottom: 50px;
 }
-
+.drop-zone{
+  position: relative;
+  width: 70vw;
+  
+}
+.images{
+  width:80vw;
+  margin-top: 20vh;
+}
 }
